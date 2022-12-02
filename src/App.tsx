@@ -4,6 +4,7 @@ import {Navigate, Route, Routes} from 'react-router-dom'
 import {Container} from 'react-bootstrap'
 import {NoteList} from './components/NoteList/NoteList'
 import {EditNote} from './components/EditNote'
+import {NewNote} from './components/NewNote'
 
 export function App() {
     return <Container className="my-4">
