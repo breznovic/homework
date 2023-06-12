@@ -1,5 +1,5 @@
 .friendMessage {
-
+    margin-left: 40px;
 }
 
 .friendImageAndText {
@@ -11,7 +11,12 @@
 }
 
 .friendText {
-
+    margin: -130px 0px 0px 230px;
+    border: 1px solid brown;
+    background-color: beige;
+    color: brown;
+    padding: 10px;
+    width: 23%;
 }
 
 .friendText:after {
@@ -19,7 +24,7 @@
 }
 
 .friendName {
-
+    margin: 0px 0px 5px 0px;
 }
 
 .friendMessageText {
@@ -27,5 +32,5 @@
 }
 
 .friendTime {
-
+    margin: 75px 60px 10px 75px;
 }
