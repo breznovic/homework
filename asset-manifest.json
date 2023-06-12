@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/breznovic/homework.git/static/css/main.bdbdce79.css",
+    "main.js": "/breznovic/homework.git/static/js/main.8915dba2.js",
+    "static/js/787.f99c86d6.chunk.js": "/breznovic/homework.git/static/js/787.f99c86d6.chunk.js",
+    "static/media/avatar.png": "/breznovic/homework.git/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/breznovic/homework.git/index.html",
+    "main.bdbdce79.css.map": "/breznovic/homework.git/static/css/main.bdbdce79.css.map",
+    "main.8915dba2.js.map": "/breznovic/homework.git/static/js/main.8915dba2.js.map",
+    "787.f99c86d6.chunk.js.map": "/breznovic/homework.git/static/js/787.f99c86d6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bdbdce79.css",
+    "static/js/main.8915dba2.js"
+  ]
+}
