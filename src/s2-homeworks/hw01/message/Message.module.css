@@ -18,7 +18,16 @@
 }
 
 .text:after {
-    
+  /* border: 0 solid transparent;
+  border-left: 28px solid aqua;
+  border-top: 28px solid transparent;
+  top: 11.2%;
+  bottom: 1000;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 74.8%;
+  width: 0; */
 }
 
 .name {
