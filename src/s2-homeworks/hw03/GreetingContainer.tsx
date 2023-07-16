@@ -1,4 +1,10 @@
-import React, { ChangeEvent, KeyboardEvent, useState } from "react";
+import React, {
+  ChangeEvent,
+  Dispatch,
+  KeyboardEvent,
+  SetStateAction,
+  useState,
+} from "react";
 import Greeting from "./Greeting";
 import { UserType } from "./HW3";
 
@@ -8,20 +14,29 @@ type GreetingContainerPropsType = {
 };
 
 export const pureAddUser = (
-  name: any,
-  setError: any,
-  setName: any,
-  addUserCallback: any
+  name: string,
+  setError: (error: string) => void,
+  setName: (name: string) => void,
+  addUserCallback: (name: string) => void
 ) => {
-  // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
+  if (name.trim() === "") {
+    setError("Ошибка! Введите имя!");
+  } else {
+    addUserCallback(name);
+    setName("");
+  }
 };
 
-export const pureOnBlur = (name: any, setError: any) => {
-  // если имя пустое - показать ошибку
+export const pureOnBlur = (name: string, setError: (error: string) => void) => {
+  if (name.trim() === "") {
+    setError("Ошибка! Введите имя!");
+  }
 };
 
-export const pureOnEnter = (e: any, addUser: any) => {
-  // если нажата кнопка Enter - добавить
+export const pureOnEnter = (e: KeyboardEvent, addUser: () => void) => {
+  if (e.key === "Enter") {
+    addUser();
+  }
 };
 
 // более простой и понятный для новичков
@@ -37,10 +52,10 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
   const [error, setError] = useState<string>("");
 
   const setNameCallback = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newName = e.target.value;
-    setName(newName);
+    setName(e.currentTarget.value);
     error && setError("");
   };
+
   const addUser = () => {
     pureAddUser(name, setError, setName, addUserCallback);
   };
@@ -49,12 +64,14 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     pureOnBlur(name, setError);
   };
 
-  const onEnter = (e: any) => {
+  const onEnter = (e: KeyboardEvent<Element>) => {
     pureOnEnter(e, addUser);
   };
 
-  const totalUsers = 0; // need to fix
-  const lastUserName = "some name"; // need to fix
+  const totalUsers = users.length;
+  const lastUserName = users[users.length - 1]
+    ? users[users.length - 1].name
+    : "";
 
   return (
     <Greeting
