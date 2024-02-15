@@ -1,7 +1,11 @@
 import s from "./FriendMessage.module.css";
-import { MessagePropsType } from "../message/Message";
+import { MessageType } from "../HW1";
 
-const FriendMessage = (props: MessagePropsType) => {
+type FriendMessagePropsType = {
+  message: MessageType;
+};
+
+const FriendMessage = (props: FriendMessagePropsType) => {
   return (
     <div
       id={"hw1-friend-message-" + props.message.id}
@@ -9,6 +13,7 @@ const FriendMessage = (props: MessagePropsType) => {
     >
       <div className={s.friendImageAndText}>
         <img
+          className={s.avatar}
           id={"hw1-friend-avatar-" + props.message.id}
           src={props.message.user.avatar}
         />

@@ -1,5 +1,5 @@
-import { MessageType } from "../HW1";
 import s from "./Message.module.css";
+import { MessageType } from "../HW1";
 
 export type MessagePropsType = {
   message: MessageType;
@@ -10,6 +10,7 @@ const Message = (props: MessagePropsType) => {
     <div id={"hw1-message-" + props.message.id} className={s.message}>
       <div className={s.imageAndText}>
         <img
+          className={s.avatar}
           id={"hw1-avatar-" + props.message.id}
           src={props.message.user.avatar}
         />
