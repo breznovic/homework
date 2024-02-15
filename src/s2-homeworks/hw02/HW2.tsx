@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Affairs from "./affairs/Affairs";
 import s2 from "../../s1-main/App.module.css";
 
@@ -11,7 +11,7 @@ export type AffairType = {
 export type FilterType = "all" | AffairPriorityType;
 
 const defaultAffairs: AffairType[] = [
-  { _id: 1, name: "React", priority: "high" }, // студенты могут изменить содержимое name и количество элементов в массиве, ...priority не менять!
+  { _id: 1, name: "React", priority: "high" },
   { _id: 2, name: "Anime", priority: "low" },
   { _id: 3, name: "Games", priority: "low" },
   { _id: 4, name: "Work", priority: "high" },

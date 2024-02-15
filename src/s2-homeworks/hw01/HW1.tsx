@@ -1,6 +1,6 @@
 import Message from "./message/Message";
 import MessageSender from "./message-sender/MessageSender";
-import s2 from "../../s1-main/App.module.css";
+import s2 from '../../s1-main/App.module.css'
 import FriendMessage from "./friend-message/FriendMessage";
 import avatar from "./avatar.png";
 
