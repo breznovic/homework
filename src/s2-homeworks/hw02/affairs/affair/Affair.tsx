@@ -30,7 +30,7 @@ function Affair(props: AffairPropsType) {
         className={buttonClass}
         onClick={deleteCallback}
       >
-        {/*текст кнопки могут изменить студенты*/}X{/**/}
+        X
       </button>
     </div>
   );

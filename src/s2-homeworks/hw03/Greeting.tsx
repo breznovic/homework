@@ -2,29 +2,26 @@ import React, { ChangeEvent, KeyboardEvent } from "react";
 import s from "./Greeting.module.css";
 
 type GreetingPropsType = {
-  name: string; // need to fix any
-  setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void; // need to fix any
-  addUser: () => void; // need to fix any
-  onBlur: () => void; // need to fix any
-  onEnter: (e: KeyboardEvent) => void; // need to fix any
-  error: string; // need to fix any
-  totalUsers: number; // need to fix any
-  lastUserName?: string; // need to fix any
+  name: string;
+  setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void;
+  addUser: () => void;
+  onBlur: () => void;
+  onEnter: (e: KeyboardEvent) => void;
+  error: string;
+  totalUsers: number;
+  lastUserName?: string;
 };
 
-// презентационная компонента (для верстальщика)
-const Greeting: React.FC<GreetingPropsType> = (
-  {
-    name,
-    setNameCallback,
-    addUser,
-    onEnter,
-    onBlur,
-    error,
-    totalUsers,
-    lastUserName,
-  } // деструктуризация пропсов
-) => {
+const Greeting: React.FC<GreetingPropsType> = ({
+  name,
+  setNameCallback,
+  addUser,
+  onEnter,
+  onBlur,
+  error,
+  totalUsers,
+  lastUserName,
+}) => {
   const inputClass = error ? s.errorInput : s.input;
 
   return (
@@ -55,13 +52,13 @@ const Greeting: React.FC<GreetingPropsType> = (
           className={s.button}
           disabled={!name.trim()}
         >
-          add
+          Add
         </button>
       </div>
 
       {lastUserName && (
         <div className={s.greeting}>
-          Привет <span id={"hw3-last-user"}>{lastUserName}</span>!
+          Hola! <span id={"hw3-last-user"}>{lastUserName}</span>!
         </div>
       )}
     </div>
